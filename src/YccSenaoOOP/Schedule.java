@@ -6,9 +6,9 @@ import org.json.simple.parser.ParseException;
 
 public class Schedule {
 
-	private String ext; //³]©w¦¹±Æµ{©Ò³B²zªºÀÉ®×®æ¦¡ (cs, docx, jpg, ...)
-	private String time; //³]©w¦¹±Æµ{©Ò³B²zªº®É¶¡ (12:00)
-	private String interval; //³]©w¦¹±Æµ{°õ¦æªº¶¡¹j (Everyday, Sunday, Monday, ...)
+	private String ext; //è¨­å®šæ­¤æ’ç¨‹æ‰€è™•ç†çš„æª”æ¡ˆæ ¼å¼ (cs, docx, jpg, ...)
+	private String time; //è¨­å®šæ­¤æ’ç¨‹æ‰€è™•ç†çš„æ™‚é–“ (12:00)
+	private String interval; //è¨­å®šæ­¤æ’ç¨‹åŸ·è¡Œçš„é–“éš” (Everyday, Sunday, Monday, ...)
 	
 	public Schedule(String ext, String time, String interval) {
 		super();

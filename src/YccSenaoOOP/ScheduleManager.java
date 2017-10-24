@@ -2,15 +2,17 @@ package YccSenaoOOP;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-public class ScheduleManager {
-
+public class ScheduleManager extends JsonManager {
+	private static Logger logger = Logger.getLogger(ScheduleManager.class);
+	private String PATH="D:\\Git\\Repository\\Senao\\github.com\\YccSenaoOOP\\src\\schedule.json";
+	
 	private List<Schedule> schedules = new java.util.ArrayList<Schedule>();
-	private JSONParser parser = new JSONParser();
 
 	public int getCount() {
 		return schedules.size();
@@ -23,31 +25,35 @@ public class ScheduleManager {
 			return null;
 		}
 	}
-
-	//§π≥\ßπæ„™∫JSONObject•]§FJSONArray©Œ¨O™Ω±µ¨OJSONArray
-	public void processSchedules(String s) {
+	
+	//‰∏ªË¶ÅÂØ¶‰ΩúSchedulesÁöÑËß£Êûê
+	@Override
+	public void processJsonConfig() {
+		logger.debug("SchedulesÁöÑËß£Êûê");
 		try {
-			Object obj = parser.parse(s);
+			Object obj = this.getJsonObject();
 			if (obj instanceof JSONObject) {
 				JSONObject jo=(JSONObject)obj;
-				String schedulesJsonArrayString=jo.get("schedules").toString();
-				processSchedulesFromJSONArray(schedulesJsonArrayString);
+				JSONArray jsons=(JSONArray)jo.get("schedules");
+				for(int i=0; i<jsons.size(); i++) {
+					JSONObject json=(JSONObject)jsons.get(i);
+					Schedule sche=new Schedule(json.toJSONString());
+					schedules.add(sche);
+					logger.debug("["+i+"] schedule ext="+sche.getExt()+", time="+sche.getTime()+", interval="+sche.getInterval());
+				}				
 			}
-			else if (obj instanceof JSONArray) {
-				processSchedulesFromJSONArray(s);
-			}
-		} catch (ParseException e) {
-			e.printStackTrace();
+		} catch (Exception e) {
+			logger.error(e.getMessage());
 		}
 	}
+
+	@Override
+	public String getPATH() {
+		return this.PATH;
+	}
 	
-	private void processSchedulesFromJSONArray(String schedulesJsonArrayString) throws ParseException {
-		Object obj = parser.parse(schedulesJsonArrayString);
-		JSONArray ja = (JSONArray) obj;
-		for (int i = 0; i < ja.size(); i++) {
-			JSONObject jo = (JSONObject) ja.get(i);
-			Schedule sche = new Schedule(jo.toJSONString());
-			schedules.add(sche);
-		}		
+	public static void main(String s[]) {
+		ScheduleManager sh=new ScheduleManager();
+		sh.processJsonConfig();
 	}
 }

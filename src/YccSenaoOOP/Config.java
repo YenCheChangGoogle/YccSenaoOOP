@@ -6,15 +6,15 @@ import org.json.simple.parser.ParseException;
 
 public class Config implements java.io.Serializable {
 
-	private String ext; //³]©wÀÉ®×®æ¦¡ (cs, docx, jpg, ...)
-	private String location; //³]©w­n³Æ¥÷ÀÉ®×ªº¥Ø¿ı
-	private boolean subDirectory; //¬O§_³B²z¤l¥Ø¿ı, true:³B²z¤l¥Ø¿ı¡F false:¤£ ³B²z¤l¥Ø¿ı
-	private String unit; //³]©w³Æ¥÷³æ¦ì, file:¥H³æ¤@ÀÉ®×¬°³B²z³æ¦ì¡F directory:¥H¾ã­Ó¥Ø¿ı¬°³B²z³æ¦ì
-	private boolean remove; //³B²z§¹¬O§_§R°£ÀÉ®×, true:§R°£¡F false:¤£§R°£
-	private String handler;	//zip:À£ÁY¡F encode:¥[±K
-	private String destination; //³B²z«á­nÀx¦s¨ì¤°»ò¦a¤è, directory:¥Ø¿ı¡F db:¸ê®Æ®w
-	private String dir;	//³B²z«áªº¥Ø¿ı
-	private String connectionString; //³]©w¸ê®Æ®w³s±µ¦r¦ê
+	private String ext; //è¨­å®šæª”æ¡ˆæ ¼å¼ (cs, docx, jpg, ...)
+	private String location; //è¨­å®šè¦å‚™ä»½æª”æ¡ˆçš„ç›®éŒ„
+	private boolean subDirectory; //æ˜¯å¦è™•ç†å­ç›®éŒ„, true:è™•ç†å­ç›®éŒ„ï¼› false:ä¸ è™•ç†å­ç›®éŒ„
+	private String unit; //è¨­å®šå‚™ä»½å–®ä½, file:ä»¥å–®ä¸€æª”æ¡ˆç‚ºè™•ç†å–®ä½ï¼› directory:ä»¥æ•´å€‹ç›®éŒ„ç‚ºè™•ç†å–®ä½
+	private boolean remove; //è™•ç†å®Œæ˜¯å¦åˆªé™¤æª”æ¡ˆ, true:åˆªé™¤ï¼› false:ä¸åˆªé™¤
+	private String handler;	//zip:å£“ç¸®ï¼› encode:åŠ å¯†
+	private String destination; //è™•ç†å¾Œè¦å„²å­˜åˆ°ä»€éº¼åœ°æ–¹, directory:ç›®éŒ„ï¼› db:è³‡æ–™åº«
+	private String dir;	//è™•ç†å¾Œçš„ç›®éŒ„
+	private String connectionString; //è¨­å®šè³‡æ–™åº«é€£æ¥å­—ä¸²
 	
 	public Config(String ext, String location, boolean subDirectory, String unit, boolean remove, String handler, String destination, String dir, String connectionString) {
 		super();
@@ -72,6 +72,7 @@ public class Config implements java.io.Serializable {
 		return connectionString;
 	}
 	
+	//æ¸¬è©¦
 	public static void main(String args[]) throws ParseException {
 		String configJsonString=
 				"{ \"ext\": \"cs\", "+ 

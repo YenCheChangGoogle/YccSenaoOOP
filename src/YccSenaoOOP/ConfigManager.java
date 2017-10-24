@@ -2,15 +2,17 @@ package YccSenaoOOP;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-public class ConfigManager {
-
+public class ConfigManager extends JsonManager {
+	private static Logger logger = Logger.getLogger(ConfigManager.class);
+	private String PATH="D:\\Git\\Repository\\Senao\\github.com\\YccSenaoOOP\\src\\config.json";
+	
 	private List<Config> configs=new java.util.ArrayList<Config>();	
-	private JSONParser parser = new JSONParser();
 	
 	public int getCount() { return configs.size(); }
 	public Config getConfig(int index) {
@@ -21,35 +23,32 @@ public class ConfigManager {
 			return null;
 		}
 	}	
-
-	//§π≥\ßπæ„™∫JSONObject•]§FJSONArray©Œ¨O™Ω±µ¨OJSONArray
-	public void processConfigs(String s) {
+		
+	//‰∏ªË¶ÅÂØ¶‰ΩúConfigÁöÑËß£Êûê
+	@Override
+	public void processJsonConfig() {
+		logger.debug("ConfigÁöÑËß£Êûê");
 		try {
-			Object obj = parser.parse(s);
+			Object obj = this.getJsonObject();
 			if (obj instanceof JSONObject) {
 				JSONObject jo=(JSONObject)obj;
-				String schedulesJsonArrayString=jo.get("configs").toString();
-				processConfigsFromJSONArray(schedulesJsonArrayString);
+				JSONArray jsons=(JSONArray)jo.get("configs");
+				for(int i=0; i<jsons.size(); i++) {
+					JSONObject json=(JSONObject)jsons.get(i);
+					Config cfg=new Config(json.toJSONString());
+					configs.add(cfg);
+					logger.debug("["+i+"] config ext="+cfg.getExt()+", location="+cfg.getLocation()+", subDirectory="+cfg.isSubDirectory()+", unit="+cfg.getUnit()+", remove="+cfg.isRemove()+", handler="+cfg.getHandler()+", destination="+cfg.getDestination()+", dir="+cfg.getDir()+", connectionString="+cfg.getConnectionString());
+				}				
 			}
-			else if (obj instanceof JSONArray) {
-				processConfigsFromJSONArray(s);
-			}
-		} catch (ParseException e) {
-			e.printStackTrace();
+		} catch (Exception e) {
+			logger.error(e.getMessage());
 		}
 	}
 	
-	private void processConfigsFromJSONArray(String configJsonArrayString) {
-		try {
-			JSONArray ja=(JSONArray)parser.parse(configJsonArrayString);
-			for(int i=0; i<ja.size(); i++) {
-				JSONObject jo=(JSONObject)ja.get(i);
-				Config cfg=new Config(jo.toJSONString());
-				configs.add(cfg);
-			}
-		} catch (ParseException e) {
-			e.printStackTrace();
-		}
+	@Override
+	public String getPATH() {
+		return this.PATH;
 	}
+
 	
 }
