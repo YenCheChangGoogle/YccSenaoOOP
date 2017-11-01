@@ -1,0 +1,6 @@
+{
+	"file":      "YccSenaoOOP.impl.FileHandler",
+	"encode":    "YccSenaoOOP.impl.EncodeHandler",
+	"zip":       "YccSenaoOOP.impl.ZipHandler",
+	"directory": "YccSenaoOOP.impl.DirectoryHandler"
+}
