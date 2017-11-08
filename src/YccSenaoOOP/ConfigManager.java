@@ -37,7 +37,20 @@ public class ConfigManager extends JsonManager {
 				JSONArray jsons = (JSONArray) jo.get("configs");
 				for (int i = 0; i < jsons.size(); i++) {
 					JSONObject json = (JSONObject) jsons.get(i);
-					Config cfg = new Config(json.toJSONString());
+					
+					//Config cfg = new Config(json.toJSONString());
+					Config cfg = new Config(
+							json.get("ext").toString(), 
+							json.get("location").toString(), 
+							(json.get("subDirectory").toString().equalsIgnoreCase("true") ? true : false), 
+							json.get("unit").toString(), 
+							(json.get("remove").toString().equalsIgnoreCase("true") ? true : false),  
+							(json.get("handlers").toString().replace("[", "").replaceAll("]", "").replaceAll("\"", "").split(",")),
+							json.get("destination").toString(),
+							json.get("dir").toString(), 
+							json.get("connectionString").toString());
+					
+					
 					configs.add(cfg);
 					logger.debug("[" + i + "] config ext=" + cfg.getExt() + ", location=" + cfg.getLocation() + ", subDirectory=" + cfg.isSubDirectory() + ", unit=" + cfg.getUnit() + ", remove="							+ cfg.isRemove() + ", handler=" + cfg.getHandlers() + ", destination=" + cfg.getDestination() + ", dir=" + cfg.getDir() + ", connectionString=" + cfg.getConnectionString());
 				}

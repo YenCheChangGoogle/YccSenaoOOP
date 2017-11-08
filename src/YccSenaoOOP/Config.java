@@ -29,6 +29,7 @@ public class Config implements java.io.Serializable {
 		this.connectionString = connectionString;
 	}
 
+	/*
 	public Config(String configJsonString) throws ParseException {
 		JSONParser parser = new JSONParser();
 		Object o = parser.parse(configJsonString);
@@ -43,6 +44,7 @@ public class Config implements java.io.Serializable {
 		this.dir = j.get("dir").toString();
 		this.connectionString = j.get("connectionString").toString();
 	}
+	*/
 
 	public String getExt() {
 		return ext;
@@ -80,6 +82,7 @@ public class Config implements java.io.Serializable {
 		return connectionString;
 	}
 
+	/*
 	// 測試
 	public static void main(String args[]) throws ParseException {
 		String configJsonString = "{ " + "  \"ext\": \"cs\", " + "  \"location\": \"c:\\Projects\", "
@@ -92,4 +95,5 @@ public class Config implements java.io.Serializable {
 		System.out.println(c.isSubDirectory());
 		System.out.println(c.getLocation());
 	}
+	*/
 }

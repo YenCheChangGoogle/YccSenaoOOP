@@ -8,7 +8,7 @@ public class Candidate implements java.io.Serializable {
 	private static final long serialVersionUID = 1L;
 	private Config config;
 	private Date fileDateTime; // 檔案的日期與時間
-	private String name;
+	private String name; //檔案名稱
 	private String processName; // 處理檔案的 process
 	private long size; // 檔案 size
 
