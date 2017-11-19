@@ -7,6 +7,8 @@ import org.apache.log4j.Logger;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
+import YccSenaoOOP.myBackupCandidate.Candidate;
+import YccSenaoOOP.myBackupCandidate.CandidateFactory;
 import YccSenaoOOP.util.JsonUtil;
 
 public class HandlerFactory {
@@ -19,6 +21,8 @@ public class HandlerFactory {
 	static {
 		handlerDictionary = jsonUtil.getJsonObjectFromJsonFile(handlerMappingJsonFilePath, handlerMappingJsonFileEncoding);
 	}
+	
+	private HandlerFactory() {}
 
 	public static Handler create(String key) {
 		Handler handler = null;
@@ -45,13 +49,14 @@ public class HandlerFactory {
 		String connectionString = "";
 		Config cfg = new Config(ext, location, subDirectory, unit, remove, handlers, destination, dir, connectionString);
 
-		Date fileDateTime = new Date(); // 檔案的日期與時間
-		String name = "Homework03.pdf";
-		String processName = "DemoProcess"; // 處理檔案的 process
-		long size = 2048; // 檔案 size
+		Date fileDateTime = new Date(); //檔案的日期與時間
+		String fileName = "Homework03.pdf";
+		String processName = "DemoProcess"; //處理檔案的 process
+		long size = 2048; //檔案 size
 
-		Candidate candidate = new Candidate(cfg, fileDateTime, name, processName, size);
-
+		//Candidate candidate = CandidateFactory.create(cfg, fileName, fileDateTime, processName, size);
+		Candidate candidate = CandidateFactory.getInstance().create(cfg, fileName, fileDateTime, processName, size);
+		
 		byte[] target = null;
 		target = HandlerFactory.create("file").perform(candidate, target);
 		

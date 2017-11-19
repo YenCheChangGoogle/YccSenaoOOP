@@ -1,0 +1,13 @@
+http://files.idi.ntnu.no/publish/plantuml/repository/
+
+http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=19495
+http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=495
+
+
+
+
+在 Eclipse 里使用 PlantUML
+請參考 https://waylau.com/use-plantuml-in-eclipse/
+相關路徑
+    安装 PlantUML for Eclipse 插件http://plantuml.sourceforge.net/updatesitejuno/
+    安装Graphviz http://www.graphviz.org/pub/graphviz/stable/windows/graphviz-2.38.msi

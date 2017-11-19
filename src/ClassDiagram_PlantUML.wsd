@@ -1,0 +1,62 @@
+//[註解] private- protected# internal~ public+ {static} {abstract} 繼承<|-- 實作<|.. 關聯-> 相依.> 集合(由外部帶入)o-> 合成(由內部自建)->
+
+@startuml MyClassDiagram
+
+class MyBackupService {   
+  -managers
+  -taskDispatcher
+  
+  -init()
+  -processJsonConfig()  
+  +simpleBackup()
+  +scheduledBackup() 
+}
+MyBackupService -> TaskDispatcher
+
+class TaskDispatcher {
+  -taskFactory
+  
+  +simpleBackup()
+  +scheduledBackup()
+}
+TaskDispatcher -> TaskFactory
+
+class TaskFactory {
+  -instance
+  
+  {static}+getInstance()
+  +create()
+}
+TaskFactory -> Task
+
+interface Task {
+  +execute(Config cfg, Schedule sche)
+}
+
+class SimpleTask {
+  +execute(Config cfg, Schedule sche)
+}
+AbstractTask <|-- SimpleTask
+
+class ScheduledTask {
+  +execute(Config cfg, Schedule sche)
+}
+AbstractTask <|-- ScheduledTask
+
+abstract class AbstractTask {
+  fileFinder
+  
+  findHandlers()
+  broadcastToHandlers()
+}
+Task <|.. AbstractTask
+
+class Candidate {
+
+}
+class CandidateFactory {
+
+}
+CandidateFactory -> Candidate
+
+@enduml

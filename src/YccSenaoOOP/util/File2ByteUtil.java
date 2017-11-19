@@ -7,11 +7,11 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import YccSenaoOOP.Candidate;
+import YccSenaoOOP.myBackupCandidate.Candidate;
 
 public class File2ByteUtil {
 	
-	// 將檔案轉成byte[]
+	//將檔案轉成byte[]
 	public static byte[] convertFileToByteArray(Candidate candidate) {
 		String filepath = candidate.getConfig().getLocation() + File.separator + candidate.getName();
 		try {
@@ -24,7 +24,7 @@ public class File2ByteUtil {
 		return null;
 	}
 
-	// 將byte[]轉成檔案
+	//將byte[]轉成檔案
 	public static File convertByteArrayToFile(Candidate candidate, byte[] target) {
 		File file=null;
 		FileOutputStream fileOuputStream = null;

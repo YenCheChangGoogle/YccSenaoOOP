@@ -23,15 +23,15 @@ public abstract class JsonManager {
 	private int bufferSize = 1024;
 	JsonUtil jsonUtil = new JsonUtil();
 
-	// 取得組態檔案路徑
+	//取得組態檔案路徑
 	public abstract String getPATH();
 
-	// 自檔案讀取內容回傳JSONObject
+	//自檔案讀取內容回傳JSONObject
 	public Object getJsonObject() throws FileNotFoundException, UnsupportedEncodingException, ParseException {
 		return jsonUtil.getJsonObjectFromJsonFile(getPATH(), encoding);
 	}
 
-	// 處置
+	//處置
 	public abstract void processJsonConfig();
 
 }

@@ -13,9 +13,9 @@ public class ScheduleManager extends JsonManager {
 	private String PATH = "D:\\Git\\Repository\\Senao\\github.com\\YccSenaoOOP\\src\\schedule.json";
 
 	private List<Schedule> schedules = new java.util.ArrayList<Schedule>();
-
-	public int getCount() {
-		return schedules.size();
+	
+	public List<Schedule> getSchedules() {
+		return this.schedules;
 	}
 
 	public Schedule getSchedule(int index) {
@@ -26,7 +26,7 @@ public class ScheduleManager extends JsonManager {
 		}
 	}
 
-	// 主要實作Schedules的解析
+	//主要實作Schedules的解析
 	@Override
 	public void processJsonConfig() {
 		logger.debug("Schedules的解析");

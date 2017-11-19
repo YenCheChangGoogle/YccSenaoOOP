@@ -6,6 +6,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
+import YccSenaoOOP.myBackupCandidate.Candidate;
+
 public abstract class AbstractFileFinder implements FileFinder {
 	protected Config cfg;
 	protected List<String> filepaths = new java.util.ArrayList<String>();
@@ -23,27 +25,23 @@ public abstract class AbstractFileFinder implements FileFinder {
 
 	protected abstract Candidate createCandidate(String filename);
 
-	@Override
 	public Iterator iterator() {
 		return this;
 	}
 
-	@Override
 	public boolean hasNext() {
 		return (1 + this.index) < this.filepaths.size();
 	}
-
-	@Override
+	
 	public Object next() {
 		this.index++;
-		if (this.index < filepaths.size()) { // 仍然有值的時候
+		if (this.index < filepaths.size()) { //仍然有值的時候
 			return createCandidate(filepaths.get(index));
 		} else {
 			return null;
 		}
 	}
-
-	@Override
+	
 	public void remove() {
 		index = -1;
 		filepaths.clear();

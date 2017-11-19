@@ -14,8 +14,8 @@ public class ConfigManager extends JsonManager {
 
 	private List<Config> configs = new java.util.ArrayList<Config>();
 
-	public int getCount() {
-		return configs.size();
+	public List<Config> getConfigs() {
+		return this.configs;
 	}
 
 	public Config getConfig(int index) {
@@ -26,7 +26,7 @@ public class ConfigManager extends JsonManager {
 		}
 	}
 
-	// 主要實作Config的解析
+	//主要實作Config的解析
 	@Override
 	public void processJsonConfig() {
 		logger.debug("Config的解析");

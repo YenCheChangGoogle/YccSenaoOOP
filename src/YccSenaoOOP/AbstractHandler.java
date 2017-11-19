@@ -2,6 +2,8 @@ package YccSenaoOOP;
 
 import org.apache.log4j.Logger;
 
+import YccSenaoOOP.myBackupCandidate.Candidate;
+
 public abstract class AbstractHandler implements Handler {
 	
 	public byte[] perform(Candidate candidate, byte[] target) {

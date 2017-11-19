@@ -9,10 +9,11 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
-
+import com.sun.istack.internal.logging.Logger;
 import YccSenaoOOP.AbstractFileFinder;
-import YccSenaoOOP.Candidate;
 import YccSenaoOOP.Config;
+import YccSenaoOOP.myBackupCandidate.Candidate;
+import YccSenaoOOP.myBackupCandidate.CandidateFactory;
 
 public class LocalFileFinder extends AbstractFileFinder {
 
@@ -20,7 +21,7 @@ public class LocalFileFinder extends AbstractFileFinder {
 		
 	}
 	
-	public LocalFileFinder(Config cfg) {
+	public LocalFileFinder(final Config cfg) {
 		if(cfg.isSubDirectory())
 			this.filepaths=getSubDirectoryFiles(cfg);
 		else {							
@@ -28,7 +29,7 @@ public class LocalFileFinder extends AbstractFileFinder {
 			
 			//過濾後只留下組態內設定的檔案類型
 			File fs[]=dir.listFiles(new FilenameFilter() {
-				@Override
+
 				public boolean accept(File dir, String name) {
 					return name.toUpperCase().endsWith(cfg.getExt().toUpperCase());
 				}				
@@ -42,12 +43,14 @@ public class LocalFileFinder extends AbstractFileFinder {
 	
 	@Override
 	protected Candidate createCandidate(String filename) {
-
 		String process="DEMO"; //處理檔案的 process
+		Candidate c=null;
 		File file=new File(cfg.getDir()+File.separator+filename);
-		Candidate c=new Candidate(cfg, new Date(file.lastModified()), filename, process, file.length());
+		if(file.exists()) {
+			CandidateFactory.getInstance().create(cfg, filename, new Date(file.lastModified()), process, file.length());
+		}
 		
-		return c;
+		return c;		
 	}
 
 	//回傳目前目錄與子目錄下的所有檔案

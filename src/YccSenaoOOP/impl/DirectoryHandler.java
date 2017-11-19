@@ -11,12 +11,12 @@ import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 
 import YccSenaoOOP.AbstractHandler;
-import YccSenaoOOP.Candidate;
 import YccSenaoOOP.HandlerFactory;
+import YccSenaoOOP.myBackupCandidate.Candidate;
 import YccSenaoOOP.util.File2ByteUtil;
 import YccSenaoOOP.util.FileCopyUtil;
 
-// 將檔案複製到指定目錄
+//將檔案複製到指定目錄
 public class DirectoryHandler extends AbstractHandler {
 	private static Logger logger = Logger.getLogger(DirectoryHandler.class);
 	
@@ -25,8 +25,8 @@ public class DirectoryHandler extends AbstractHandler {
 		super.perform(candidate, target);
 		byte[] result = target;
 
-		// (1)當第二個參數為 null時, 不做任何複製
-		// (2)當傳入byte[]時, 複製到其他目錄
+		//(1)當第二個參數為 null時, 不做任何複製
+		//(2)當傳入byte[]時, 複製到其他目錄
 		if (target != null) {
 			result = this.copyToDirectory(candidate, target);
 		}

@@ -15,7 +15,7 @@ import org.json.simple.parser.ParseException;
 public class JsonUtil {
 	private Logger logger = Logger.getLogger(JsonUtil.class);
 
-	// 自檔案讀取內容回傳JSONObject
+	//自檔案讀取內容回傳JSONObject
 	public JSONObject getJsonObjectFromJsonFile(String jsonFilePath, String encoding) {
 		try {
 			int bufferSize = 4096000;

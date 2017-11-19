@@ -6,11 +6,9 @@ import java.util.Arrays;
 import java.util.zip.Deflater;
 import java.util.zip.GZIPOutputStream;
 import java.util.zip.Inflater;
-
 import org.apache.log4j.Logger;
-
 import YccSenaoOOP.AbstractHandler;
-import YccSenaoOOP.Candidate;
+import YccSenaoOOP.myBackupCandidate.Candidate;
 
 public class ZipHandler extends AbstractHandler {
 	private static Logger logger = Logger.getLogger(ZipHandler.class);
@@ -20,15 +18,15 @@ public class ZipHandler extends AbstractHandler {
 		super.perform(candidate, target);
 		byte[] result = target;
 
-		// (1)當第二個參數為null時, 不做任何壓縮
-		// (2)當傳入byte[]時, 壓縮後回傳byte[]
+		//(1)當第二個參數為null時, 不做任何壓縮
+		//(2)當傳入byte[]時, 壓縮後回傳byte[]
 		if (target != null) {
 			result = this.zipData(candidate, target);
 		}
 		return result;
 	}
 
-	// 將byte[]加以壓縮, 並傳回byte[]
+	//將byte[]加以壓縮, 並傳回byte[]
 	private byte[] zipData(Candidate candidate, byte[] target) {
 		return compressor(target);
 	}
@@ -62,7 +60,7 @@ public class ZipHandler extends AbstractHandler {
 		return result;
 	}
 
-	// 解壓縮
+	//解壓縮
 	private static byte[] decompressor(byte[] compressedData) {
 		logger.debug("");
 		
