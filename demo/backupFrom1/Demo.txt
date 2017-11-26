@@ -1,0 +1,33 @@
+﻿11-26 15:11:11  [main] DEBUG YccSenaoOOP.Manager.ConfigManager.processJsonConfig(ConfigManager.java:57) - [0] config ext=txt, location=D:/Git/Repository/Senao/github.com/YccSenaoOOP/demo/backupFrom1, subDirectory=true, unit=file, remove=false, handler=[Ljava.lang.String;@1e80bfe8, destination=directory, dir=D:/Git/Repository/Senao/github.com/YccSenaoOOP/demo/backupTo1, connectionString=
+11-26 15:11:11  [main] DEBUG YccSenaoOOP.Manager.ScheduleManager.processJsonConfig(ScheduleManager.java:44) - [0] schedule ext=cs, time=12:00, interval=Everyday
+11-26 15:11:11  [main] DEBUG YccSenaoOOP.Manager.ScheduleManager.processJsonConfig(ScheduleManager.java:44) - [1] schedule ext=docx, time=20:00, interval=Everyday
+11-26 15:11:11  [main] DEBUG YccSenaoOOP.Manager.ScheduleManager.processJsonConfig(ScheduleManager.java:44) - [2] schedule ext=jpg, time=7:00, interval=Monday
+11-26 15:11:11  [main] DEBUG YccSenaoOOP.TaskFactory.create(TaskFactory.java:22) - taskName=simple
+11-26 15:11:11  [main] DEBUG YccSenaoOOP.TaskDispatcher.simpleBackup(TaskDispatcher.java:41) - 處理簡單備份 txt
+11-26 15:11:11  [main] DEBUG YccSenaoOOP.FileFinderFactory.create(FileFinderFactory.java:21) - finder=file, cfg=YccSenaoOOP.Config@79fc0f2f
+11-26 15:11:11  [main] DEBUG YccSenaoOOP.FileFinder.impl.LocalFileFinder.getSubDirectoryFiles(LocalFileFinder.java:71) - 此目錄(D:\Git\Repository\Senao\github.com\YccSenaoOOP\demo\backupFrom1)下的檔案含有D:\Git\Repository\Senao\github.com\YccSenaoOOP\demo\backupFrom1\Demo.txt
+11-26 15:11:11  [main] DEBUG YccSenaoOOP.FileFinder.impl.LocalFileFinder.getSubDirectoryFiles(LocalFileFinder.java:71) - 此目錄(D:\Git\Repository\Senao\github.com\YccSenaoOOP\demo\backupFrom1)下的檔案含有D:\Git\Repository\Senao\github.com\YccSenaoOOP\demo\backupFrom1\github-git-cheat-sheet.pdf
+11-26 15:11:11  [main] DEBUG YccSenaoOOP.FileFinder.impl.LocalFileFinder.getSubDirectoryFiles(LocalFileFinder.java:71) - 此目錄(D:\Git\Repository\Senao\github.com\YccSenaoOOP\demo\backupFrom1)下的檔案含有D:\Git\Repository\Senao\github.com\YccSenaoOOP\demo\backupFrom1\各地小吃.xls
+11-26 15:11:11  [main] DEBUG YccSenaoOOP.FileFinder.impl.AbstractFileFinder.next(AbstractFileFinder.java:46) - 處理的檔案名稱=Demo.txt
+11-26 15:11:11  [main] DEBUG YccSenaoOOP.Task.impl.SimpleTask.execute(SimpleTask.java:20) - SimpleTask.execute() 處理副檔名是 txt
+11-26 15:11:11  [main] DEBUG YccSenaoOOP.HandlerFactory.create(HandlerFactory.java:37) - YccSenaoOOP.Handler.impl.FileHandler@4783da3f
+11-26 15:11:11  [main] DEBUG YccSenaoOOP.Task.impl.AbstractTask.findHandlers(AbstractTask.java:35) - 處置的動作是 zip
+11-26 15:11:11  [main] DEBUG YccSenaoOOP.HandlerFactory.create(HandlerFactory.java:37) - YccSenaoOOP.Handler.impl.ZipHandler@49097b5d
+11-26 15:11:11  [main] DEBUG YccSenaoOOP.HandlerFactory.create(HandlerFactory.java:37) - YccSenaoOOP.Handler.impl.DirectoryHandler@7eda2dbb
+11-26 15:11:11  [main] DEBUG YccSenaoOOP.Task.impl.AbstractTask.broadcastToHandlers(AbstractTask.java:46) - YccSenaoOOP.Handler.impl.FileHandler@4783da3f, Demo.txt, 
+11-26 15:11:11  [main] DEBUG YccSenaoOOP.Handler.AbstractHandler.perform(AbstractHandler.java:12) - 基本共用執行的程序部位
+11-26 15:11:11  [main] DEBUG YccSenaoOOP.Util.File2ByteUtil.convertFileToByteArray(File2ByteUtil.java:23) - D:/Git/Repository/Senao/github.com/YccSenaoOOP/demo/backupFrom1\Demo.txt
+11-26 15:11:11  [main] DEBUG YccSenaoOOP.Handler.impl.FileHandler.perform(FileHandler.java:45) - 資料流長度=40
+11-26 15:11:11  [main] DEBUG YccSenaoOOP.Task.impl.AbstractTask.broadcastToHandlers(AbstractTask.java:48) - 40
+11-26 15:11:11  [main] DEBUG YccSenaoOOP.Task.impl.AbstractTask.broadcastToHandlers(AbstractTask.java:46) - YccSenaoOOP.Handler.impl.ZipHandler@49097b5d, Demo.txt, 
+11-26 15:11:11  [main] DEBUG YccSenaoOOP.Handler.AbstractHandler.perform(AbstractHandler.java:12) - 基本共用執行的程序部位
+11-26 15:11:11  [main] DEBUG YccSenaoOOP.Handler.impl.ZipHandler.compressor(ZipHandler.java:47) - 壓縮
+11-26 15:11:11  [main] DEBUG YccSenaoOOP.Handler.impl.ZipHandler.compressor(ZipHandler.java:59) - 壓縮前 (40)
+11-26 15:11:11  [main] DEBUG YccSenaoOOP.Handler.impl.ZipHandler.compressor(ZipHandler.java:74) - 壓縮後 (24)
+11-26 15:11:11  [main] DEBUG YccSenaoOOP.Handler.impl.ZipHandler.perform(ZipHandler.java:29) - 24
+11-26 15:11:11  [main] DEBUG YccSenaoOOP.Task.impl.AbstractTask.broadcastToHandlers(AbstractTask.java:48) - 24
+11-26 15:11:11  [main] DEBUG YccSenaoOOP.Task.impl.AbstractTask.broadcastToHandlers(AbstractTask.java:46) - YccSenaoOOP.Handler.impl.DirectoryHandler@7eda2dbb, Demo.txt, 
+11-26 15:11:11  [main] DEBUG YccSenaoOOP.Handler.AbstractHandler.perform(AbstractHandler.java:12) - 基本共用執行的程序部位
+11-26 15:11:11  [main] DEBUG YccSenaoOOP.Handler.impl.DirectoryHandler.copyToDirectory(DirectoryHandler.java:30) - 
+11-26 15:11:11  [main] DEBUG YccSenaoOOP.Util.File2ByteUtil.convertByteArrayToFile(File2ByteUtil.java:65) - ############# D:/Git/Repository/Senao/github.com/YccSenaoOOP/demo/backupTo1\Demo.txt
+11-26 15:11:11  [main] DEBUG YccSenaoOOP.Task.impl.AbstractTask.broadcastToHandlers(AbstractTask.java:48) - 24

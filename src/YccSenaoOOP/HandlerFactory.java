@@ -7,9 +7,10 @@ import org.apache.log4j.Logger;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
-import YccSenaoOOP.myBackupCandidate.Candidate;
-import YccSenaoOOP.myBackupCandidate.CandidateFactory;
-import YccSenaoOOP.util.JsonUtil;
+import YccSenaoOOP.Handler.IHandler;
+import YccSenaoOOP.MyBackupCandidate.Candidate;
+import YccSenaoOOP.MyBackupCandidate.CandidateFactory;
+import YccSenaoOOP.Util.JsonUtil;
 
 public class HandlerFactory {
 	private static JSONObject handlerDictionary;
@@ -24,12 +25,16 @@ public class HandlerFactory {
 	
 	private HandlerFactory() {}
 
-	public static Handler create(String key) {
-		Handler handler = null;
+	public static IHandler create(String key) {
+		//logger.debug("key="+key);
+		
+		IHandler handler = null;
 		try {
 			String theClass = handlerDictionary.get(key).toString();
-			Class c = Class.forName(theClass);
-			handler = (Handler) c.newInstance();
+			//logger.debug(theClass);
+			Class<?> c = Class.forName(theClass);
+			handler = (IHandler) c.newInstance();
+			logger.debug(handler);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

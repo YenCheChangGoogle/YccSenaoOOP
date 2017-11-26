@@ -1,6 +1,7 @@
 {
-	"file":      "YccSenaoOOP.impl.FileHandler",
-	"encode":    "YccSenaoOOP.impl.EncodeHandler",
-	"zip":       "YccSenaoOOP.impl.ZipHandler",
-	"directory": "YccSenaoOOP.impl.DirectoryHandler"
+	"file":      "YccSenaoOOP.Handler.impl.FileHandler",
+	"encode":    "YccSenaoOOP.Handler.impl.EncodeHandler",
+	"zip":       "YccSenaoOOP.Handler.impl.ZipHandler",
+	"directory": "YccSenaoOOP.Handler.impl.DirectoryHandler",
+	"db":        "YccSenaoOOP.Handler.impl.DBAdapter"
 }
