@@ -1,0 +1,13 @@
+@startuml MyTaskDispatcher
+
+actor User
+
+User -> TaskFactory : create()
+activate TaskFactory
+create SimpleTask
+TaskFactory -->> SimpleTask : new
+User <<-- TaskFactory : ITask
+deactivate TaskFactory
+User -> SimpleTask : execute()
+
+@enduml

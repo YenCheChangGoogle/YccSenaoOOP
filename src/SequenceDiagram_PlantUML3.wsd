@@ -1,0 +1,31 @@
+//Synchronous  : ->   表示 實線+實心箭頭
+//Asynchronous : ->>  表示 實線+空心箭頭, 最後加 :方法名稱 (表示要非同步)
+//Creation     : -->> 表示 虛線+空心箭頭, 最後加 :方法名稱
+//Reply        : <<-- 表示 虛線+空心箭頭, 最後加上 class名稱表示回傳型別
+
+@startuml MyTaskDispatcher
+
+actor User
+
+User -> MyBackupService : simpleBackup()
+activate MyBackupService
+create taskDispatcher
+
+MyBackupService -->> taskDispatcher : new
+
+taskDispatcher ->> TaskFactory : simpleBackup()
+activate taskDispatcher
+
+activate TaskFactory
+create SimpleTask
+TaskFactory -->> SimpleTask : create()
+
+TaskFactory <<-- SimpleTask :ITask
+taskDispatcher <<--  TaskFactory : ITask
+deactivate TaskFactory
+
+taskDispatcher -> SimpleTask : ITask:execute()
+deactivate  taskDispatcher
+deactivate MyBackupService
+
+@enduml
