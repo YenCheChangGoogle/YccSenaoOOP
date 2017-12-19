@@ -28,10 +28,12 @@ public class Clock implements java.lang.Runnable {
 			
 			onTick();
 			
+			//時鐘計時器
 			try { Thread.currentThread().sleep(1000); }catch(Exception e) {}
 		}
 	}
 	
+	//觸發有使用到此時鐘的用戶端
 	public void onTick(){		
 		synchronized(this) {
 			this.notifyAll();

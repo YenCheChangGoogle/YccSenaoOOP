@@ -1,5 +1,6 @@
 package YccSenaoOOP.ObserverSample;
 
+import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.Rectangle;
 
@@ -15,16 +16,23 @@ public class DigitalClock implements java.lang.Runnable {
 		nf.setMaximumIntegerDigits(2);
 		nf.setMinimumIntegerDigits(2);
 	}
-	private javax.swing.JFrame jframe=new javax.swing.JFrame("★★★★★【24小時制電子鐘】★★★★★");
+	private String title="★★★★★【24小時制電子鐘】★★★★★";
+	private javax.swing.JFrame jframe=new javax.swing.JFrame(title);
 	private javax.swing.JLabel H24=new javax.swing.JLabel("00");
 	private javax.swing.JLabel Dot_H24_MI=new javax.swing.JLabel(":");
 	private javax.swing.JLabel MI=new javax.swing.JLabel("00");
 	private javax.swing.JLabel Dot_MI_SS=new javax.swing.JLabel(":");
 	private javax.swing.JLabel SS=new javax.swing.JLabel("00");
 	
+	public DigitalClock(String title) {
+		this.title=title;
+		jframe.setTitle(title);
+		init();		
+		Thread t=new Thread(this);
+		t.start();		
+	}
 	public DigitalClock() {
-		init();
-		
+		init();		
 		Thread t=new Thread(this);
 		t.start();
 	}
@@ -61,14 +69,13 @@ public class DigitalClock implements java.lang.Runnable {
 		jframe.setResizable(false);
 		//jframe.pack();
 		jframe.setVisible(true);
-		
 	}
 	
 	public void update(int hours, int minutes, int seconds) {
 			H24.setText(nf.format(hours));
 			MI.setText(nf.format(minutes));
 			SS.setText(nf.format(seconds));
-			System.out.println(nf.format(hours)+":"+nf.format(minutes)+":"+nf.format(seconds));
+			//System.out.println(nf.format(hours)+":"+nf.format(minutes)+":"+nf.format(seconds));
 	}
 	
 	public void run() {		
@@ -83,5 +90,21 @@ public class DigitalClock implements java.lang.Runnable {
 
 	public static void main(String[] args) {
 		DigitalClock dc=new DigitalClock();
-	}	
+	}
+	
+	public javax.swing.JFrame getJframe() {
+		return jframe;
+	}
+	
+	public Color getLabelColor() {
+		return H24.getForeground();
+	}
+	
+	public void setLabelColor(Color c) {
+		this.H24.setForeground(c);
+		this.Dot_H24_MI.setForeground(c);
+		this.MI.setForeground(c);
+		this.Dot_MI_SS.setForeground(c);
+		this.SS.setForeground(c);
+	}
 }

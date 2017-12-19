@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.2" icons="true" automaticImage="GIF" always-add-relationships="false" generalizations="true" 
+  realizations="true" associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="YccSenaoOOP.ObserverSample.SubscribePublishClock" project="YccSenaoOOP" 
+    file="/YccSenaoOOP/src/YccSenaoOOP/ObserverSample/SubscribePublishClock.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="261" width="263" x="427" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="YccSenaoOOP.ObserverSample.Subscriber" project="YccSenaoOOP" 
+    file="/YccSenaoOOP/src/YccSenaoOOP/ObserverSample/Subscriber.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="243" width="159" x="41" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="YccSenaoOOP.ObserverSample.SubscribeClockDemo" project="YccSenaoOOP" 
+    file="/YccSenaoOOP/src/YccSenaoOOP/ObserverSample/SubscribeClockDemo.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="147" x="240" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="4" language="java" name="YccSenaoOOP.ObserverSample.ISubscriber" project="YccSenaoOOP" 
+    file="/YccSenaoOOP/src/YccSenaoOOP/ObserverSample/ISubscriber.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="145" x="41" y="338"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <realization id="5">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </realization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
