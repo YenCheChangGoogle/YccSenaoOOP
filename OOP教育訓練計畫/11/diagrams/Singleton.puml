@@ -1,0 +1,24 @@
+@startuml
+
+scale 800*800
+
+class Singleton{
+    -INSTANCE
+    -Singleton()
+    +getInstance()
+}
+
+note right of Singleton
+  ...
+  <color:red>(1)</color>private static final Singleton INSTANCE = new Singleton();
+  <color:red>(2)</color>private Singleton(){}
+  <color:red>(3)</color>public static Singleton getInstance(){
+        return INSTANCE;
+  }...
+
+  <color:red>(1)</color> = INSTANCE 常數
+  <color:red>(2)</color> = 私有建構函式 (private constructor)
+  <color:red>(3)</color> = 靜態方法 (static method)
+end note
+
+@enduml
