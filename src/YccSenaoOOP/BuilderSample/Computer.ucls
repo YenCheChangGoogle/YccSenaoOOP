@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.2" icons="true" automaticImage="GIF" always-add-relationships="true" generalizations="true" 
+  realizations="true" associations="true" dependencies="true" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="YccSenaoOOP.BuilderSample.Computer" project="YccSenaoOOP" 
+    file="/YccSenaoOOP/src/YccSenaoOOP/BuilderSample/Computer.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="261" width="188" x="40" y="23"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="YccSenaoOOP.BuilderSample.ComputerBuilder" project="YccSenaoOOP" 
+    file="/YccSenaoOOP/src/YccSenaoOOP/BuilderSample/ComputerBuilder.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="315" width="274" x="307" y="47"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="YccSenaoOOP.BuilderSample.ComputerBuilderMain" project="YccSenaoOOP" 
+    file="/YccSenaoOOP/src/YccSenaoOOP/BuilderSample/ComputerBuilderMain.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="147" x="96" y="377"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

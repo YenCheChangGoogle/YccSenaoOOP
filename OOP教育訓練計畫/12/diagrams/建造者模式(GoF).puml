@@ -1,0 +1,51 @@
+@startuml
+
+scale 800*800
+
+skinparam defaultFontName "Noto Sans CJK TC Regular"
+
+class Director{
+    +Construct()
+}
+
+interface Builder{
+    +BuildPart()
+}
+
+class ConcreteBuilder{
+    +BuildPart()
+    +GetResult()
+}
+
+class Product{
+}
+
+Director o-right-> Builder : -builder
+Builder <|-down- ConcreteBuilder
+ConcreteBuilder .right.> Product
+
+note as DirectorNote
+<color:blue>指揮者</color>
+根據用戶的需求建構 Product 物件
+end note
+
+note as ConcreteBuilderNote
+<color:blue>具體建造者</color>
+實現 Builder 介面，建構組裝各個零件
+end note
+
+note as BuilderNote
+<color:blue>抽象介面</color>
+建立 Product 物件的各個零件的抽象介面
+end note
+
+note as ProductNote
+  具體產品
+end note
+
+DirectorNote .up. Director
+ConcreteBuilderNote .up. ConcreteBuilder
+BuilderNote .left Builder
+ProductNote .up Product
+
+@enduml

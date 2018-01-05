@@ -1,0 +1,41 @@
+@startuml
+
+scale 800*800
+
+skinparam defaultFontName "Noto Sans CJK TC Regular"
+
+class Main{
+}
+
+class Director{
+    -Builder
+    +construct()
+}
+
+interface Builder{
+    +makeTitle()
+    +makeString()
+    +makeItems()
+    +getResult()
+}
+
+class TextBuilder {
+    +makeTitle()
+    +makeString()
+    +makeItems()
+    +getResult()
+}
+
+class HTMLBuilder {
+    +makeTitle()
+    +makeString()
+    +makeItems()
+    +getResult()
+}
+
+Main -right-> Director
+Director o-right- Builder
+Builder <|-down- TextBuilder
+Builder <|-down- HTMLBuilder
+
+@enduml

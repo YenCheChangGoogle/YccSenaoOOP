@@ -1,0 +1,41 @@
+@startuml
+
+scale 800*800
+
+skinparam defaultFontName "Noto Sans CJK TC Regular"
+
+class 委託人{
+}
+
+class 監工{
+    -工人
+    +建造()
+}
+
+class 工人{
+    +建造主結構()
+    +建造門()
+    +建造窗()
+    +建造地板()
+}
+
+class 泥做師傅 {
+    +建造主結構()
+    +建造門()
+    +建造窗()
+    +建造地板()
+}
+
+class 木工師傅 {
+    +建造主結構()
+    +建造門()
+    +建造窗()
+    +建造地板()
+}
+
+委託人 -right-> 監工
+監工 o-right- 工人
+工人 <|-down- 泥做師傅
+工人 <|-down- 木工師傅
+
+@enduml

@@ -1,0 +1,62 @@
+@startuml
+
+skinparam defaultFontName "Noto Sans CJK TC Regular"
+
+class Client {
+}
+
+class Director {
+    +Director()
+    +construct()
+}
+
+class Builder {
+    +Builder()
+    {abstract} +buildBody()
+    +buildFrom()
+    +buildSendDate()
+    {abstract} +buildSubject()
+    +buildTo()
+    +sendMessage()
+}
+
+class WelcomeBuilder{
+    +WelcomeBuilder()
+    +builderBody()
+    +buildSubject()
+}
+
+class GoodbyeBuilder{
+    +GoodbyeBuilder()
+    +builderBody()
+    +buildSubject()
+}
+
+class AutoMessage {
+    +AutoMessage()
+    +Body
+    +From
+    +Subject
+    +To
+    +send()
+}
+
+class GoodbyeMessage {
+    +GoodbyeMessage()
+    +sayGoodbye()
+}
+
+class WelcomeMessage {
+    +WelcomeMessage()
+    +sayWelcome()
+}
+
+Client -> Director
+Director o-> Builder : -builder
+Builder <|-- GoodbyeBuilder
+Builder <|-- WelcomeBuilder
+WelcomeBuilder --> WelcomeMessage
+GoodbyeBuilder --> GoodbyeMessage
+AutoMessage <|-down- GoodbyeMessage
+AutoMessage <|-down- WelcomeMessage
+@enduml
