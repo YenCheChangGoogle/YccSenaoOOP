@@ -1,0 +1,15 @@
+@startuml
+
+scale 800*800
+
+skinparam defaultFontName "Noto Sans CJK TC Regular"
+
+class 火腿蛋三明治 {
+	+ 烤麵包()
+	+ 抹醬料()
+	+ 煎蛋()
+	+ 加料()
+	+ 包裝()
+}
+
+@enduml
