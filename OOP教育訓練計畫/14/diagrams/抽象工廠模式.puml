@@ -1,0 +1,55 @@
+@startuml
+
+scale 2048*2048
+
+skinparam defaultFontName "Noto Sans CJK TC Regular"
+
+package 抽象工廠 {
+    abstract class 抽象元件{
+    }
+
+    abstract class 抽象連結{
+    }
+
+    abstract class 抽象頁面{
+    }
+
+    abstract class 抽象容器{
+    }
+
+    abstract class 抽象工廠{
+    }
+
+
+    抽象元件 <|-right- 抽象連結
+    抽象元件 <|-down- 抽象容器
+    抽象元件 <|-down- 抽象頁面
+    抽象工廠 -left-> 抽象連結
+    抽象工廠 -left-> 抽象容器
+    抽象工廠 -up-> 抽象頁面
+}
+
+package 具體工廠 {
+    class 列表工廠 {
+    }
+
+    class 列表連結{
+    }
+
+    class 列表頁面{
+    }
+
+    class 列表容器{
+    }
+
+    抽象工廠 <|-left- 列表工廠
+    抽象連結 <|-left- 列表連結
+    抽象頁面 <|-left- 列表頁面
+    抽象容器 <|-left- 列表容器
+
+    列表工廠 --> 列表連結
+    列表工廠 --> 列表頁面
+    列表工廠 -right-> 列表容器
+}
+
+@enduml

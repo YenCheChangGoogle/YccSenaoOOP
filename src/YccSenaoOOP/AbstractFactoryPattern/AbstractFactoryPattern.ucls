@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.2" icons="true" automaticImage="PNG" always-add-relationships="true" generalizations="true" 
+  realizations="true" associations="true" dependencies="true" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="YccSenaoOOP.AbstractFactoryPattern.AbstractFactory" project="YccSenaoOOP" 
+    file="/YccSenaoOOP/src/YccSenaoOOP/AbstractFactoryPattern/AbstractFactory.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="173" x="790" y="176"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="YccSenaoOOP.AbstractFactoryPattern.Main" project="YccSenaoOOP" 
+    file="/YccSenaoOOP/src/YccSenaoOOP/AbstractFactoryPattern/Main.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="173" x="984" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="YccSenaoOOP.AbstractFactoryPattern.PoDreamEquipFactory" project="YccSenaoOOP" 
+    file="/YccSenaoOOP/src/YccSenaoOOP/AbstractFactoryPattern/PoDreamEquipFactory.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="171" width="173" x="554" y="387"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="YccSenaoOOP.AbstractFactoryPattern.WarcraftEquipFactory" project="YccSenaoOOP" 
+    file="/YccSenaoOOP/src/YccSenaoOOP/AbstractFactoryPattern/WarcraftEquipFactory.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="171" width="173" x="1298" y="387"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="YccSenaoOOP.AbstractFactoryPattern.Armor" project="YccSenaoOOP" 
+    file="/YccSenaoOOP/src/YccSenaoOOP/AbstractFactoryPattern/Armor.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="173" x="701" y="863"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="YccSenaoOOP.AbstractFactoryPattern.Boots" project="YccSenaoOOP" 
+    file="/YccSenaoOOP/src/YccSenaoOOP/AbstractFactoryPattern/Boots.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="173" x="891" y="616"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="YccSenaoOOP.AbstractFactoryPattern.Bow" project="YccSenaoOOP" 
+    file="/YccSenaoOOP/src/YccSenaoOOP/AbstractFactoryPattern/Bow.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="173" x="275" y="863"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="YccSenaoOOP.AbstractFactoryPattern.Clothes" project="YccSenaoOOP" 
+    file="/YccSenaoOOP/src/YccSenaoOOP/AbstractFactoryPattern/Clothes.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="173" x="360" y="616"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="YccSenaoOOP.AbstractFactoryPattern.CuteHat" project="YccSenaoOOP" 
+    file="/YccSenaoOOP/src/YccSenaoOOP/AbstractFactoryPattern/CuteHat.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="173" x="41" y="1056"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="YccSenaoOOP.AbstractFactoryPattern.FlyBoots" project="YccSenaoOOP" 
+    file="/YccSenaoOOP/src/YccSenaoOOP/AbstractFactoryPattern/FlyBoots.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="173" x="488" y="863"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="YccSenaoOOP.AbstractFactoryPattern.Hat" project="YccSenaoOOP" 
+    file="/YccSenaoOOP/src/YccSenaoOOP/AbstractFactoryPattern/Hat.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="173" x="1127" y="863"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="YccSenaoOOP.AbstractFactoryPattern.Helmet" project="YccSenaoOOP" 
+    file="/YccSenaoOOP/src/YccSenaoOOP/AbstractFactoryPattern/Helmet.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="173" x="1104" y="616"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="YccSenaoOOP.AbstractFactoryPattern.Leather" project="YccSenaoOOP" 
+    file="/YccSenaoOOP/src/YccSenaoOOP/AbstractFactoryPattern/Leather.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="173" x="62" y="863"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="YccSenaoOOP.AbstractFactoryPattern.LongSword" project="YccSenaoOOP" 
+    file="/YccSenaoOOP/src/YccSenaoOOP/AbstractFactoryPattern/LongSword.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="173" x="1340" y="863"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="YccSenaoOOP.AbstractFactoryPattern.PowerHelmet" project="YccSenaoOOP" 
+    file="/YccSenaoOOP/src/YccSenaoOOP/AbstractFactoryPattern/PowerHelmet.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="173" x="1766" y="863"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="YccSenaoOOP.AbstractFactoryPattern.RockyHelmet" project="YccSenaoOOP" 
+    file="/YccSenaoOOP/src/YccSenaoOOP/AbstractFactoryPattern/RockyHelmet.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="173" x="914" y="863"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="YccSenaoOOP.AbstractFactoryPattern.Set" project="YccSenaoOOP" 
+    file="/YccSenaoOOP/src/YccSenaoOOP/AbstractFactoryPattern/Set.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="245" x="830" y="387"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="YccSenaoOOP.AbstractFactoryPattern.SpeedBoots" project="YccSenaoOOP" 
+    file="/YccSenaoOOP/src/YccSenaoOOP/AbstractFactoryPattern/SpeedBoots.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="173" x="1553" y="863"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="YccSenaoOOP.AbstractFactoryPattern.SpeedHat" project="YccSenaoOOP" 
+    file="/YccSenaoOOP/src/YccSenaoOOP/AbstractFactoryPattern/SpeedHat.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="173" x="1787" y="1056"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="20" language="java" name="YccSenaoOOP.AbstractFactoryPattern.Weapon" project="YccSenaoOOP" 
+    file="/YccSenaoOOP/src/YccSenaoOOP/AbstractFactoryPattern/Weapon.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="173" x="636" y="616"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <dependency id="21">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="20"/>  
+  </dependency>  
+  <association id="22">    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="23" name="helmet"/>      
+      <multiplicity id="24" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="25">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <dependency id="26">    
+    <bendpoint x="1435" y="616"/>    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="18"/>  
+  </dependency>  
+  <dependency id="27">    
+    <bendpoint x="563" y="616"/>    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <generalization id="28">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="6"/>  
+  </generalization>  
+  <association id="29">    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="30" name="boots"/>      
+      <multiplicity id="31" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="32">    
+    <bendpoint x="736" y="176"/>    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="3"/>  
+  </dependency>  
+  <generalization id="33">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
+  <dependency id="34">    
+    <bendpoint x="778" y="387"/>    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="20"/>  
+  </dependency>  
+  <generalization id="35">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <dependency id="36">    
+    <bendpoint x="1105" y="387"/>    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <dependency id="37">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="8"/>  
+  </dependency>  
+  <generalization id="38">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="20"/>  
+  </generalization>  
+  <association id="39">    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="40" name="weapon"/>      
+      <multiplicity id="41" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="20" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="42">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="12"/>  
+  </dependency>  
+  <dependency id="43">    
+    <bendpoint x="1349" y="616"/>    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="14"/>  
+  </dependency>  
+  <association id="44">    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="45" name="clothes"/>      
+      <multiplicity id="46" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="47">    
+    <bendpoint x="1328" y="616"/>    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
+  <generalization id="48">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <dependency id="49">    
+    <bendpoint x="799" y="387"/>    
+    <bendpoint x="839" y="616"/>    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
+  <dependency id="50">    
+    <bendpoint x="1168" y="176"/>    
+    <bendpoint x="1168" y="387"/>    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="12"/>  
+  </dependency>  
+  <dependency id="51">    
+    <bendpoint x="993" y="176"/>    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="17"/>  
+  </dependency>  
+  <dependency id="52">    
+    <bendpoint x="1126" y="176"/>    
+    <bendpoint x="1126" y="387"/>    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <dependency id="53">    
+    <bendpoint x="1307" y="616"/>    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="5"/>  
+  </dependency>  
+  <dependency id="54">    
+    <bendpoint x="502" y="176"/>    
+    <bendpoint x="502" y="387"/>    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="8"/>  
+  </dependency>  
+  <dependency id="55">    
+    <bendpoint x="1147" y="387"/>    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="12"/>  
+  </dependency>  
+  <dependency id="56">    
+    <bendpoint x="757" y="176"/>    
+    <bendpoint x="757" y="387"/>    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="20"/>  
+  </dependency>  
+  <dependency id="57">    
+    <bendpoint x="1969" y="616"/>    
+    <bendpoint x="1969" y="863"/>    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="19"/>  
+  </dependency>  
+  <dependency id="58">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="20"/>  
+  </dependency>  
+  <dependency id="59">    
+    <bendpoint x="605" y="616"/>    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
+  <dependency id="60">    
+    <bendpoint x="329" y="616"/>    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <generalization id="61">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <generalization id="62">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <generalization id="63">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="20"/>  
+  </generalization>  
+  <dependency id="64">    
+    <bendpoint x="31" y="616"/>    
+    <bendpoint x="31" y="863"/>    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <dependency id="65">    
+    <bendpoint x="308" y="616"/>    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="13"/>  
+  </dependency>  
+  <generalization id="66">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <dependency id="67">    
+    <bendpoint x="523" y="387"/>    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="8"/>  
+  </dependency>  
+  <association id="68">    
+    <bendpoint x="860" y="616"/>    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="69" name="hat"/>      
+      <multiplicity id="70" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="71">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="12"/>  
+  </dependency>  
+  <dependency id="72">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="1"/>  
+  </dependency>  
+  <dependency id="73">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="8"/>  
+  </dependency>  
+  <dependency id="74">    
+    <bendpoint x="584" y="616"/>    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="16"/>  
+  </dependency>  
+  <generalization id="75">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <dependency id="76">    
+    <bendpoint x="1480" y="616"/>    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="15"/>  
+  </dependency>  
+  <dependency id="77">    
+    <bendpoint x="1501" y="176"/>    
+    <bendpoint x="1501" y="387"/>    
+    <bendpoint x="1501" y="616"/>    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
+  <dependency id="78">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <dependency id="79">    
+    <bendpoint x="1189" y="176"/>    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </dependency>  
+  <generalization id="80">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="6"/>  
+  </generalization>  
+  <generalization id="81">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
+  <dependency id="82">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
