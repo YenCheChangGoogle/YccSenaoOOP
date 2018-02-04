@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Digital Clock using JavaScript</title>
+    <link href="http://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet" type="text/css"/>
+    <link href="v1.css" rel="stylesheet" type="text/css"/>
+</head>
+<!-- ON LOAD OF THE PAGE, THE CLOCK WILL START TICKING. -->
+<body>
+<div style="background-color:#F3F3F3; max-width:440px;width:100%;margin:0 auto;padding:40px;">
+    <table class="tabBlock" align="center" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+            <td class="clock" id="dc"></td>  <!-- THE DIGITAL CLOCK. -->
+            <td>
+                <table cellpadding="0" cellspacing="0" border="0">
+
+                    <!-- HOUR IN 'AM' AND 'PM'. -->
+                    <tr>
+                        <td class="clocklg" id="dc_period"></td>
+                    </tr>
+
+                    <!-- SHOWING SECONDS. -->
+                    <tr>
+                        <td class="clocklg" id="dc_second"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+<script src="v1.bundle.js"></script>
+</html>

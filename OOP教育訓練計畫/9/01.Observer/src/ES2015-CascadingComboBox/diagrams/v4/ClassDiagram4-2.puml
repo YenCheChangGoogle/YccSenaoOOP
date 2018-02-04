@@ -1,0 +1,24 @@
+@startuml
+
+skinparam defaultFontName "Fira Code"
+skinparam class {
+    FontStyle bold
+    FontSize 12
+}
+
+scale 800*800
+
+class ComboBox{
+    +selectedIndex
+    -onChange
+}
+
+class CascadingComboBox{
+    -onChange
+}
+
+ComboBox <|-down- CascadingComboBox
+
+CascadingComboBox --o CascadingComboBox
+
+@enduml

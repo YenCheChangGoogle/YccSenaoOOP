@@ -1,0 +1,28 @@
+@startuml
+
+skinparam defaultFontName "Fira Code"
+skinparam class {
+    FontStyle bold
+    FontSize 12
+}
+
+scale 800*800
+
+class CascadingComboBox{
+    -child
+    -data
+    -defaultOptions
+    -domObject
+    -id
+    +onCreateChildData
+    +onCreateOption
+    +onItemSelected
+    -bindEvents()
+    -createOptions()
+    -fillOptions()
+    -updateChild()
+    +clear()
+    +setData()
+}
+
+@enduml

@@ -1,0 +1,16 @@
+@startuml
+
+skinparam class {
+    FontStyle bold
+    FontSize 12
+}
+
+scale 800*800
+
+class Clock{
+    +hours
+    +minutes
+    +seconds
+}
+
+@enduml

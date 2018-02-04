@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="MPro.js"></script>
+    <script src="../src/underscore.js"></script>
+    <script src="../src/SystemUtils.js"></script>
+    <script src="../src/CascadingComboBox.js"></script>
+</head>
+<body>
+
+<select name="optone" id="category1">
+    <option value="" selected="selected">請選擇大分類</option>
+</select>
+<select name="optone" id="category2">
+    <option value="" selected="selected">請選擇中分類</option>
+</select>
+
+<select name="optone" id="category3_1">
+    <option value="" selected="selected">請選擇小分類1</option>
+</select>
+
+<select name="optone" id="category3_2">
+    <option value="" selected="selected">請選擇小分類2</option>
+</select>
+
+<select name="optone" id="category3_3">
+    <option value="" selected="selected">請選擇小分類3</option>
+</select>
+
+<script>
+    function onCreateOptionCallback(index, data) {
+        return {
+            key: data.id,
+            value: data.name
+        }
+    }
+
+    var comboBoxMain = new CascadingComboBox(
+        {
+            id: 'category1',
+            onCreateOption: onCreateOptionCallback,
+            onSelected: function (index, target) {
+            }
+        }
+    );
+    comboBoxMain.setData(MPro.promotion);
+
+	var comboBoxSecond = new CascadingComboBox(
+        {
+            id: 'category2',
+            onCreateOption: onCreateOptionCallback,
+            onSelected: function (index, target) {
+            }
+        }
+    );
+	
+    var comboBox1 = new CascadingComboBox(
+        {
+            id: 'category3_1',
+            onCreateOption: onCreateOptionCallback,
+            onSelected: function (index, target) {
+            }
+        }
+    );
+
+    var comboBox2 = new CascadingComboBox(
+        {
+            id: 'category3_2',
+            onCreateOption: onCreateOptionCallback,
+            onSelected: function (index, target) {
+            }
+        }
+    );
+
+    var comboBox3 = new CascadingComboBox(
+        {
+            id: 'category3_3',
+            onCreateOption: onCreateOptionCallback,
+            onSelected: function (index, target) {
+            }
+        }
+    );
+
+	comboBoxMain.attachChild({
+        child: comboBoxSecond,
+        onCreateChildData:
+            /**
+             * @callback onCreateChildDataCallback
+             * @param {Object} data
+             * @param {CascadingComboBox} target
+             * @returns {Object}
+             */
+            function (data, target) {
+                return data.children1;
+            }
+    });
+
+    comboBoxSecond.attachChild({
+        child: comboBox1,
+        onCreateChildData:
+            /**
+             * @callback onCreateChildDataCallback
+             * @param {Object} data
+             * @param {CascadingComboBox} target
+             * @returns {Object}
+             */
+            function (data, target) {
+                return data.children1;
+            }
+    });
+
+    comboBoxSecond.attachChild({
+        child: comboBox2,
+        onCreateChildData:
+            /**
+             * @callback onCreateChildDataCallback
+             * @param {Object} data
+             * @param {CascadingComboBox} target
+             * @returns {Object}
+             */
+            function (data, target) {
+                return data.children2;
+            }
+    });
+
+    comboBoxSecond.attachChild({
+        child: comboBox3,
+        onCreateChildData:
+            /**
+             * @callback onCreateChildDataCallback
+             * @param {Object} data
+             * @param {CascadingComboBox} target
+             * @returns {Object}
+             */
+            function (data, target) {
+                return data.children3;
+            }
+    });
+</script>
+
+</body>
+</html>

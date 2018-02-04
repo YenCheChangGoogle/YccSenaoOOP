@@ -1,0 +1,35 @@
+@startuml
+
+skinparam defaultFontName "Fira Code"
+skinparam class {
+    FontStyle bold
+    FontSize 12
+}
+
+scale 800*800
+
+class Button {
+    +caption
+    +update()
+}
+
+class TextArea{
+}
+
+class CascadingComboBox{
+    +registerObserver()
+    +notifyObservers()
+}
+
+interface ComboBoxObserver {
+    +update()
+}
+
+ComboBoxObserver <|-down- Button
+ComboBoxObserver <|-down- TextArea
+
+CascadingComboBox .left.> ComboBoxObserver
+
+CascadingComboBox --o CascadingComboBox
+
+@enduml

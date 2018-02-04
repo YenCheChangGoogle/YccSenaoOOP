@@ -1,0 +1,37 @@
+@startuml
+
+skinparam class {
+    FontStyle bold
+    FontSize 12
+}
+
+class Subject{
+    +attach(observer)
+    +detach(observer)
+    +notify()
+}
+
+class ConcreteSubject{
+    +concreteState
+    +getState()
+    +setState()
+}
+
+class Observer{
+    +update
+}
+
+
+class ConcreteObserver{
+    +observerState
+    +update
+}
+
+Subject <|-down- ConcreteSubject
+Observer <|-down- ConcreteObserver
+Subject -right-> Observer
+
+ConcreteObserver -left-> ConcreteSubject
+
+
+@enduml

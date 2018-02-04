@@ -1,0 +1,31 @@
+@startuml
+
+@startuml
+
+skinparam defaultFontName "Fira Code"
+skinparam class {
+    FontStyle bold
+    FontSize 12
+}
+
+scale 800*800
+
+class Component{
+}
+
+class ComponentWithMinxIn
+
+class ComboBoxObserver{
+}
+
+class Button{
+}
+
+Component <|-down- ComponentWithMinxIn
+ComponentWithMinxIn <|-down- Button
+ComboBoxObserver <.right. ComponentWithMinxIn
+Button .up.> ComboBoxObserver
+
+
+
+@enduml

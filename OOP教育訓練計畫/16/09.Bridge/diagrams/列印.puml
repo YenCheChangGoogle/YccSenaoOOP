@@ -1,0 +1,34 @@
+@startuml
+
+scale 800*800
+
+skinparam defaultFontName "Noto Sans Mono CJK TC Regular"
+
+abstract class 列印文件 {
+    - 實作
+    + 開啟()
+    + 列印()
+    + 關閉()
+    + 顯示()
+}
+
+class 列印指定次數 {
+    + 多次列印()
+}
+
+abstract class 列印文件實作 {
+    {abstract} 列印()
+    {abstract} 開啟()
+    {abstract} 關閉()
+}
+
+class 列印字串實作 {
+    + 列印()
+    + 開啟()
+    + 關閉()
+}
+
+列印文件 <|-down- 列印指定次數
+列印文件 o-right- 列印文件實作
+列印文件實作 <|-down- 列印字串實作
+@enduml

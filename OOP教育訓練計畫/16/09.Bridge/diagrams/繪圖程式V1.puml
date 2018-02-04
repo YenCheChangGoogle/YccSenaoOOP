@@ -1,0 +1,27 @@
+@startuml
+
+scale 800*800
+
+skinparam defaultFontName "Noto Sans Mono CJK TC Regular"
+
+abstract class 長方形{
+    {abstract} #畫線()
+    + 顯示()
+}
+
+class 長方形V1 {
+    # 畫線()
+}
+
+class 長方形V2 {
+    # 畫線()
+}
+
+
+長方形 <|-down- 長方形V1 
+長方形 <|-down- 長方形V2
+
+長方形V1 -down-> GDIPlus
+長方形V2 -down-> Win32API
+
+@enduml

@@ -1,0 +1,30 @@
+@startuml
+
+scale 800*800
+
+skinparam defaultFontName "Noto Sans Mono CJK TC Regular"
+
+abstract class 圖元 {
+    {abstract} + 顯示()
+}
+
+class 點 {
+    + 顯示()
+}
+
+class 折線 {
+    + 顯示()
+}
+
+class 多邊形 {
+    + 顯示()
+}
+
+圖元 <|-- 點
+圖元 <|-- 折線
+圖元 <|-- 多邊形
+
+折線 *-- "2..*" 點
+多邊形 *-- "3..*" 點
+
+@enduml

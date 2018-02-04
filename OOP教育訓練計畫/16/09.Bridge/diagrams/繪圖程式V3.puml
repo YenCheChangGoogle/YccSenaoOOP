@@ -1,0 +1,60 @@
+@startuml
+
+scale 800*800
+
+skinparam defaultFontName "Noto Sans Mono CJK TC Regular"
+
+package 功能抽象化 {
+    class 圖形 {
+        # 繪圖程式庫
+        + 圖形(繪圖程式庫)
+        + 畫圓()
+        + 畫線()
+        {abstract} + 顯示()
+    }
+
+    class 長方形 {
+        + 顯示()
+    }
+
+    class 圓形 {
+        + 顯示()
+    }
+}
+
+package 實作抽象化 {
+    class 繪圖程式庫 {
+        {abstract} + 畫線()
+        {abstract} + 畫圓()
+    }
+
+    class 繪圖程式庫V1 {
+        + 畫線()
+        + 畫圓()
+    }
+
+    class 繪圖程式庫V2 {
+        + 畫線()
+        + 畫圓()
+    }
+
+    class GDIPlus{
+        + 畫線()
+        + 畫圓()
+    }
+
+    class Win32API{
+        + 畫直線()
+        + 畫圓形()
+    }
+}
+
+圖形 o- 繪圖程式庫
+圖形 <|-down- 長方形
+圖形 <|-down- 圓形
+繪圖程式庫 <|-- 繪圖程式庫V1
+繪圖程式庫 <|-- 繪圖程式庫V2
+繪圖程式庫V1 -down-> GDIPlus
+繪圖程式庫V2 -down-> Win32API
+
+@enduml
