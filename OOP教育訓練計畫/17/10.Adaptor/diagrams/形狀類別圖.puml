@@ -1,0 +1,28 @@
+@startuml
+
+scale 800*800
+
+skinparam defaultFontName "Noto Sans Mono CJK TC Regular"
+
+class 使用者 {    
+}
+
+abstract class 形狀 {
+    {abstract} + 顯示()
+}
+
+class 點 {
+}
+
+class 線 {
+}
+
+class 方形 {
+}
+
+形狀 <|-- 點
+形狀 <|-- 線
+形狀 <|-- 方形
+使用者 -right-> 形狀
+
+@enduml

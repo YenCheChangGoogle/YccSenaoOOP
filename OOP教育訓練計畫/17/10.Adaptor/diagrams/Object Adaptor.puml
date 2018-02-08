@@ -1,0 +1,29 @@
+@startuml
+
+scale 800*800
+
+skinparam defaultFontName "Noto Sans Mono CJK TC Regular"
+
+class Main{
+}
+
+interface Print{
+    + printWeak()
+    + printStrong()
+}
+
+class PrintBanner{
+    + printWeak()
+    + printStrong()
+}
+
+class Banner{
+    +showWithParen()
+    +showWithAster()
+}
+
+Main -right-> Print
+Print <|-down- PrintBanner
+PrintBanner o-right-> Banner
+
+@enduml

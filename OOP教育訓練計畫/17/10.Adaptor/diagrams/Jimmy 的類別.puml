@@ -1,0 +1,16 @@
+@startuml
+
+scale 800*800
+
+skinparam defaultFontName "Noto Sans Mono CJK TC Regular"
+
+class 吉米的圓形 {
+    + 設定位置()
+    + 取得位置()
+    + 顯示()
+    + 填滿顏色()
+    + 設定它的顏色()
+    + 隱藏()  
+}
+
+@enduml
